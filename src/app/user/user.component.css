@@ -1,0 +1,190 @@
+.mainLoader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.mainLoader img{
+    position: absolute;
+    top: 50%;
+    margin-top:-32px;
+}
+.pageWrapper{
+    display: block;
+    padding:10px 10px 10px 20px;
+    max-width: 1440px;
+    margin:0 auto;
+}
+.aside{
+    width: 200px;
+    float: left;
+    min-height: 200px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding-bottom:60px;
+}
+.main{
+    float:none;
+    min-height: 200px;
+    padding-left:210px
+}
+.whiteWraper{
+    min-height: 200px;
+}
+.breadCrumb h2{
+    font-weight: normal;
+    margin:0px 0 15px 0;
+}
+.blockSection{
+    padding:10px;
+    clear: both;
+}
+.blockSection h3{
+    font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.blockSection .head .subHead{
+    border-bottom: 1px solid #ddd;
+    display: block;
+    clear: both;
+    margin: 0 20px;
+    text-align: center;
+    line-height: 30px;
+}
+.content{
+    clear: both;
+    display: block;
+    padding: 10px 0px;
+}
+.tagsList{
+    margin:0px;
+    padding:0px 10px;
+    list-style: none;
+}
+.tagsList li{
+    margin:0px 0 10px 0;
+    padding:0px;
+    width: 50%;
+    float: left;   
+}
+.tagsList li:nth-child(2n) {
+    text-align: right;
+  }
+.tagsList .tags{
+    background-color: #c5e09b;
+    padding:4px 12px;
+    color:#000;
+    display: inline-block;
+    font-size:12px;
+    border-radius:4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.tagsList .tags.active{
+    background-color: #7cba01;
+}
+
+.contentListData{
+    width:100%;
+}
+.userList{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+}
+.userList li{
+    width:25%;
+    float: left; 
+    padding:0 10px 10px 10px;  
+}
+.productWraper{
+    width:100%;
+    background-color: #fff;
+    min-height: 422px;
+    border-radius: 6px;
+    padding:15px;
+}
+.productWraper img{
+    max-width: 100%;
+    max-height: 206px;
+}
+.productWraper .imageSection{
+    width: 100%;
+    text-align: center;
+    max-height: 230px;
+    background: #ececec;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.productDetail{
+    padding:0px;
+    margin:0px;
+    font-size:14px;
+}
+.productDetail .name{
+    color:#4f589c;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+.productDetail strong{
+    font-weight: bold;
+    margin:0px;
+}
+.blueListlink{
+    color: #4f589c;
+    font-style: normal;
+    padding-left: 6px;
+}
+.message{
+    text-align: center;
+    padding: 10px;
+}
+.error{   
+    color: #ff0000;    
+    border: 1px solid #e6b4b4;
+    background: #e6c7c7;
+}
+.copyRight{
+    clear: both;
+}
+.copyRight h2{
+    display: inline-block;
+}
+.txtCenter{
+    text-align:center;
+}
+
+@media only screen and (min-width: 300px) and (max-width:700px) {
+    .userList li{
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+    .aside{
+        width: 100%;  
+        margin-bottom:20px;    
+    }
+    .main{
+        float:left;
+        padding-left:0px;
+        width: 100%;
+        float: left;
+    }
+    .productWraper{
+        min-height:inherit;
+    }
+}
+@media only screen and (min-width: 701px) and (max-width:1024px) {
+    .userList li{
+        width:50%;
+    }
+}

@@ -1,0 +1,74 @@
+
+<div class="pageWrapper">
+    <div class="breadCrumb">
+        <h2>{{textLang["headingPage"]}}</h2>
+    </div>
+    <div class="aside">
+        <div class="blockSection">
+            <div class="head">
+                <h3>{{textLang["Filters"]}}</h3>
+                <span class="subHead" title="{{textLang['LaunchYear']}}">
+                    {{textLang["LaunchYear"]}}
+                </span>
+            </div>
+            <div class="content">
+                <ul class="tagsList">
+                    <li *ngFor="let data of launchYearList"><a href="javascript:void(0)" (click)="searchbyYear(data)" [ngClass]="userQString.year == data ? 'tags active' : 'tags'" title="{{data}}">{{data}}</a></li>                   
+                </ul>
+            </div>
+        </div>
+        <div class="blockSection">
+            <div class="head">
+                <span class="subHead" title="{{textLang['SuccessfulLunch']}}">
+                    {{textLang["SuccessfulLunch"]}}
+                </span>
+            </div>
+            <div class="content">
+                <ul class="tagsList">
+                    <li *ngFor="let data of launchSuccess"><a href="javascript:void(0)" (click)="searchbySuccessLaunch(data)" [ngClass]="userQString.launchSuccess == data ? 'tags active' : 'tags'" title="{{data}}">{{data}}</a></li>                   
+                </ul>
+            </div>
+        </div>
+        <div class="blockSection">
+            <div class="head">
+                <span class="subHead" title="{{textLang['SuccessfulLanding']}}">                    
+                    {{textLang["SuccessfulLanding"]}}
+                </span>
+            </div>
+            <div class="content">
+                <ul class="tagsList">
+                    <li *ngFor="let data of launchSuccess"><a href="javascript:void(0)" (click)="searchbySuccessLand(data)" [ngClass]="userQString.landSuccess == data ? 'tags active' : 'tags'" title="{{data}}">{{data}}</a></li>                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="main">
+        <div class="whiteWraper">
+        <div class="contentListData">
+            <ul class="userList">
+                <li *ngFor="let data of userList">
+                    <div class="productWraper">
+                    <div class="imageSection"><img src="{{data.links.mission_patch_small}}" alt="{{data.mission_name}}" /></div>
+                    <p class="productDetail" *ngIf="data.mission_name">
+                        <a href="javascript:void(0)" class="name" >{{data.mission_name}} #{{data.flight_number}}</a>
+                    </p>
+                    <p class="productDetail" *ngIf="data.mission_id.length > 0">
+                        <strong>{{textLang["missionIds"]}}: </strong> <br/>
+                        <em class="blueListlink" *ngFor="let ids of data.mission_id">&bull; {{ids}} <br/></em>
+                    </p>
+                    <p class="productDetail" *ngIf="data.launch_year"><strong>{{textLang["LaunchYear"]}}: </strong> <em class="blueListlink">{{data.launch_year}}</em></p>
+
+                    <p class="productDetail"><strong> {{textLang["SuccessfulLunch"]}}: </strong> <em class="blueListlink">{{data.launch_success}}</em></p>
+                    <p *ngIf="data.rocket.first_stage.cores[0].land_success !== null" class="productDetail"><strong> {{textLang["SuccessfulLanding"]}}: </strong> <em class="blueListlink">{{data.rocket.first_stage.cores[0].land_success}}</em></p>
+                </div>
+                </li>                   
+            </ul>
+            <div class="message error" *ngIf="(userListCount == 0 && !loading)">{{textLang["noRecordFound"]}}</div>
+        </div>
+        </div>
+    </section>
+    <div class="breadCrumb copyRight txtCenter"><h2>Developed by:</h2> {{"Ajay Kumar"}}</div>
+</div>
+<div class="mainLoader" *ngIf="loading">
+   <img src="../../assets/images/loder.gif"/>
+</div>
