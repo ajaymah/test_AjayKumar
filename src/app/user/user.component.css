@@ -14,17 +14,16 @@
 }
 .pageWrapper{
     display: block;
-    padding:10px 10px 10px 20px;
+    padding:10px 15px 10px 15px;
     max-width: 1440px;
     margin:0 auto;
 }
 .aside{
     width: 200px;
     float: left;
-    min-height: 200px;
     background-color: #fff;
     border-radius: 6px;
-    padding-bottom:60px;
+    padding-bottom:10px;
 }
 .main{
     float:none;
@@ -39,8 +38,9 @@
     margin:0px 0 15px 0;
 }
 .blockSection{
-    padding:10px;
-    clear: both;
+    padding:10px 10px 0 10px;
+    float: left;
+    width: 100%;
 }
 .blockSection h3{
     font-weight: bold;
@@ -62,15 +62,19 @@
     padding: 10px 0px;
 }
 .tagsList{
-    margin:0px;
-    padding:0px 10px;
+    margin: 0px;
+    padding: 0px 0px;
     list-style: none;
+    text-align: center;
+    float: left;
+    width: 100%;
 }
 .tagsList li{
-    margin:0px 0 10px 0;
-    padding:0px;
-    width: 50%;
-    float: left;   
+    margin: 0px 12px 10px 12px;
+    padding: 0px;
+    width: 64px;
+    float: none;
+    display: inline-block;   
 }
 .tagsList li:nth-child(2n) {
     text-align: right;
@@ -79,12 +83,13 @@
     background-color: #c5e09b;
     padding:4px 12px;
     color:#000;
-    display: inline-block;
+    display: block;
     font-size:12px;
     border-radius:4px;
     cursor: pointer;
     text-decoration: none;
     text-transform: capitalize;
+    text-align: center;
 }
 .tagsList .tags.active{
     background-color: #7cba01;
@@ -102,6 +107,9 @@
     width:25%;
     float: left; 
     padding:0 10px 10px 10px;  
+}
+.userList li:nth-child(4n){
+    padding-right: 0px;
 }
 .productWraper{
     width:100%;
